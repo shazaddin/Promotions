@@ -1,6 +1,7 @@
 ﻿using HotFoodStore.Domain.Entities;
 using HotFoodStore.Domain.Promotion;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 using System;
 using System.Collections.Generic;
 
@@ -21,6 +22,19 @@ namespace HotFoodStore.UnitTests.Domain
         {
             PromotionEngine promotionEngine = new PromotionEngine(new List<IPromotion>());
             promotionEngine.CalculateDiscounts(new List<MenuItem>()); 
+        }
+
+        [TestMethod]
+        public void PromotionEngine_WhenTwoActivePromotions_ShouldApplyBothPromotions()
+        {
+            Mock<IPromotion> promotionOne = new Mock<IPromotion>();
+            Mock<IPromotion> promotionTwo = new Mock<IPromotion>();
+
+            PromotionEngine promotionEngine = new PromotionEngine(new List<IPromotion>() { promotionOne.Object, promotionTwo.Object });
+            promotionEngine.CalculateDiscounts(new List<MenuItem>());
+
+            promotionOne.Verify(p => p.ApplyPromotion(It.IsAny<List<MenuItem>>()), Times.Once());
+            promotionTwo.Verify(p => p.ApplyPromotion(It.IsAny<List<MenuItem>>()), Times.Once());
         }
     }
 }

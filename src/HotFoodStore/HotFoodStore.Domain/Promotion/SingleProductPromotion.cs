@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace HotFoodStore.Domain.Promotion
 {
-    public class SingleProductPromotion
+    public class SingleProductPromotion : IPromotion
     {
         private readonly MenuItem menuItemToDiscount;
         private readonly int discountQuantity;

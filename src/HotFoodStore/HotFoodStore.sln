@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotFoodStore", "HotFoodStore\HotFoodStore.csproj", "{DC3A94BF-0827-4CDA-B308-1B46B9CD5564}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AC12BD0E-8B75-4F6D-82CA-B92367E6045F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F239B701-56A4-42E6-8179-D9EFA483133F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{8213D586-33F6-4036-BA6A-6825246ED1DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{C4F13AD0-B363-4036-9788-A8E5A0EF5251}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotFoodStore.Domain", "HotFoodStore.Domain\HotFoodStore.Domain.csproj", "{8838A5E2-4C83-4D39-A8C9-D50D7562AE0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotFoodStore.UnitTests.Domain", "HotFoodStore.UnitTests.Domain\HotFoodStore.UnitTests.Domain.csproj", "{7298F8D7-363C-4DB8-AF2B-A11571B35A5C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC3A94BF-0827-4CDA-B308-1B46B9CD5564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC3A94BF-0827-4CDA-B308-1B46B9CD5564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC3A94BF-0827-4CDA-B308-1B46B9CD5564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC3A94BF-0827-4CDA-B308-1B46B9CD5564}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8838A5E2-4C83-4D39-A8C9-D50D7562AE0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8838A5E2-4C83-4D39-A8C9-D50D7562AE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8838A5E2-4C83-4D39-A8C9-D50D7562AE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8838A5E2-4C83-4D39-A8C9-D50D7562AE0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7298F8D7-363C-4DB8-AF2B-A11571B35A5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7298F8D7-363C-4DB8-AF2B-A11571B35A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7298F8D7-363C-4DB8-AF2B-A11571B35A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7298F8D7-363C-4DB8-AF2B-A11571B35A5C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DC3A94BF-0827-4CDA-B308-1B46B9CD5564} = {C4F13AD0-B363-4036-9788-A8E5A0EF5251}
+		{8213D586-33F6-4036-BA6A-6825246ED1DD} = {AC12BD0E-8B75-4F6D-82CA-B92367E6045F}
+		{C4F13AD0-B363-4036-9788-A8E5A0EF5251} = {AC12BD0E-8B75-4F6D-82CA-B92367E6045F}
+		{8838A5E2-4C83-4D39-A8C9-D50D7562AE0D} = {8213D586-33F6-4036-BA6A-6825246ED1DD}
+		{7298F8D7-363C-4DB8-AF2B-A11571B35A5C} = {F239B701-56A4-42E6-8179-D9EFA483133F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F63427E4-61EF-49D4-8333-4BEC9DD85BDA}
+	EndGlobalSection
+EndGlobal

@@ -1,4 +1,5 @@
 ﻿using HotFoodStore.Domain.Promotion;
+using System;
 using System.Collections.Generic;
 
 namespace HotFoodStore.Domain.Entities
@@ -12,6 +13,11 @@ namespace HotFoodStore.Domain.Entities
 
         public Basket(PromotionEngine engine)
         {
+            if (engine == null)
+            {
+                throw new ArgumentNullException(nameof(engine));
+            }
+
             this.promotionEngine = engine;
         }
 
@@ -20,7 +26,12 @@ namespace HotFoodStore.Domain.Entities
             Products.Add(item);
         }
 
-       public double CalculateTotalWithPromotions()
+        public void Clear()
+        {
+            Products.Clear(); 
+        }
+
+        public double CalculateTotalWithPromotions()
         {
             double total = 0;
             promotionEngine.CalculateDiscounts(this.Products);

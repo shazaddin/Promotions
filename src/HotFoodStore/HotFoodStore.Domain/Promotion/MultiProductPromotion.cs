@@ -50,6 +50,8 @@ namespace HotFoodStore.Domain.Promotion
 
             matchingItemsThatCanBeDiscounted1.Take(minimumMatchPairs).ToList().ForEach(p => p.DiscountedPrice = discountPrice / PRODUCTQUANTITY);
             matchingItemsThatCanBeDiscounted2.Take(minimumMatchPairs).ToList().ForEach(p => p.DiscountedPrice = discountPrice / PRODUCTQUANTITY);
+            matchingItemsThatCanBeDiscounted1.Take(minimumMatchPairs).ToList().ForEach(p => p.PromotionText = Name);
+            matchingItemsThatCanBeDiscounted2.Take(minimumMatchPairs).ToList().ForEach(p => p.PromotionText = Name);
         }
     }
 }

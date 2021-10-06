@@ -1,7 +1,9 @@
+using FluentAssertions;
 using HotFoodStore.Domain.Entities;
 using HotFoodStore.Domain.Promotion;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 
 namespace HotFoodStore.UnitTests.Domain
 {
@@ -37,6 +39,86 @@ namespace HotFoodStore.UnitTests.Domain
         {
             var margeritaPizza = CreateMenuItem(0, "Margerita pizza", "cheese and tomato", 1.50);
             MultiProductPromotion multiProductPromotion = new MultiProductPromotion(margeritaPizza, margeritaPizza, 1.00);
+        }
+
+        [TestMethod]
+        public void When_ApplyingPromotionNotQualifyMenuItems_ShouldNotRecieveDiscount()
+        {
+            var margeritaPizza = CreateMenuItem(1, "Margerita pizza", "cheese and tomato", 1.50);
+            var vegetarianPizza = CreateMenuItem(2, "Vegetarian pizza", "cheese, tomato, onions, peppers", 2.00);
+            var polloPizza = CreateMenuItem(3, "Pollo pizza", "cheese tomato chicken", 2.50);
+
+            MultiProductPromotion multiProductPromotion = new MultiProductPromotion(margeritaPizza, vegetarianPizza, 1.00);
+
+            var orderedItems = new List<MenuItem>() { margeritaPizza, polloPizza };
+            multiProductPromotion.ApplyPromotion(orderedItems);
+
+            margeritaPizza.Price.Should().Be(1.50);
+            margeritaPizza.DiscountedPrice.Should().Be(0); //discount not given
+            polloPizza.Price.Should().Be(2.50);
+            polloPizza.DiscountedPrice.Should().Be(0); //discount not given
+        }
+
+        [TestMethod]
+        public void When_ApplyingPromotionQualifyMenuItems_ShouldRecieveDiscount()
+        {
+            var margeritaPizza = CreateMenuItem(1, "Margerita pizza", "cheese and tomato", 1.50);
+            var vegetarianPizza = CreateMenuItem(2, "Vegetarian pizza", "cheese, tomato, onions, peppers", 2.00);
+            var polloPizza = CreateMenuItem(3, "Pollo pizza", "cheese tomato chicken", 2.50);
+
+            MultiProductPromotion multiProductPromotion = new MultiProductPromotion(margeritaPizza, vegetarianPizza, 1.00);
+
+            var orderedItems = new List<MenuItem>() { margeritaPizza, vegetarianPizza };
+            multiProductPromotion.ApplyPromotion(orderedItems);
+
+            margeritaPizza.Price.Should().Be(1.50);
+            margeritaPizza.DiscountedPrice.Should().Be(0.50); //discount given
+            vegetarianPizza.Price.Should().Be(2.00);
+            vegetarianPizza.DiscountedPrice.Should().Be(0.50); //discount given
+        }
+
+        [TestMethod]
+        public void When_ApplyingPromotionThreeQualifyMenuItems_OnlyTwoItemsShouldRecieveDiscount()
+        {
+            var margeritaPizza = CreateMenuItem(1, "Margerita pizza", "cheese and tomato", 1.50);
+            var vegetarianPizza = CreateMenuItem(2, "Vegetarian pizza", "cheese, tomato, onions, peppers", 2.00);
+            var vegetarianPizza1 = CreateMenuItem(2, "Vegetarian pizza", "cheese, tomato, onions, peppers", 2.00);
+            var polloPizza = CreateMenuItem(3, "Pollo pizza", "cheese tomato chicken", 2.50);
+
+            MultiProductPromotion multiProductPromotion = new MultiProductPromotion(margeritaPizza, vegetarianPizza, 1.00);
+
+            var orderedItems = new List<MenuItem>() { margeritaPizza, vegetarianPizza, vegetarianPizza1 };
+            multiProductPromotion.ApplyPromotion(orderedItems);
+
+            margeritaPizza.Price.Should().Be(1.50);
+            margeritaPizza.DiscountedPrice.Should().Be(0.50); //discount given
+            vegetarianPizza.Price.Should().Be(2.00);
+            vegetarianPizza.DiscountedPrice.Should().Be(0.50); //discount given
+            vegetarianPizza1.Price.Should().Be(2.00);
+            vegetarianPizza1.DiscountedPrice.Should().Be(0); //discount Not given on extra vegetarian
+        }
+
+        [TestMethod]
+        public void When_ApplyingPromotionThreeQualifyMenuItemsManyTimes_ShouldRecieveDiscountOnlyOnce()
+        {
+            var margeritaPizza = CreateMenuItem(1, "Margerita pizza", "cheese and tomato", 1.50);
+            var vegetarianPizza = CreateMenuItem(2, "Vegetarian pizza", "cheese, tomato, onions, peppers", 2.00);
+            var vegetarianPizza1 = CreateMenuItem(2, "Vegetarian pizza", "cheese, tomato, onions, peppers", 2.00);
+            var polloPizza = CreateMenuItem(3, "Pollo pizza", "cheese tomato chicken", 2.50);
+
+            MultiProductPromotion multiProductPromotion = new MultiProductPromotion(margeritaPizza, vegetarianPizza, 1.00);
+
+            var orderedItems = new List<MenuItem>() { margeritaPizza, vegetarianPizza, vegetarianPizza1 };
+            multiProductPromotion.ApplyPromotion(orderedItems);
+            multiProductPromotion.ApplyPromotion(orderedItems);
+            multiProductPromotion.ApplyPromotion(orderedItems);
+
+            margeritaPizza.Price.Should().Be(1.50);
+            margeritaPizza.DiscountedPrice.Should().Be(0.50); //discount given
+            vegetarianPizza.Price.Should().Be(2.00);
+            vegetarianPizza.DiscountedPrice.Should().Be(0.50); //discount given
+            vegetarianPizza1.Price.Should().Be(2.00);
+            vegetarianPizza1.DiscountedPrice.Should().Be(0); //discount Not given on extra vegetarian
         }
 
 

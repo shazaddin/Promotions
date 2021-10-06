@@ -43,6 +43,7 @@ namespace HotFoodStore.Domain.Promotion
 
             var productsToDiscount = matchingItemsThatCanBeDiscounted.Skip(mod).ToList();
             productsToDiscount.ForEach(p => p.DiscountedPrice = discountPrice / discountQuantity);
+            productsToDiscount.ForEach(p => p.PromotionText = Name);
         }
     }
 }

@@ -10,22 +10,25 @@ namespace HotFoodStore
         static void Main(string[] args)
         {
             List<IPromotion> promotions = new List<IPromotion>();
-            promotions.Add(new SingleProductPromotion(2, CreateNewProduct(1, "Margerita", "pizza", 0.75), 1.00));
-            promotions.Add(new MultiProductPromotion(CreateNewProduct(3, "Cheese", "burger", 1.00), CreateNewProduct(4, "tower", "burger", 1.00), 1.50));
-
-            List<MenuItem> orderItems = new List<MenuItem>();
-            orderItems.Add(CreateNewProduct(1, "Margerita", "pizza", 0.75)); // full price
-            orderItems.Add(CreateNewProduct(2, "vegetarian", "pizza", 1.00)); // full price
-            orderItems.Add(CreateNewProduct(1, "Margerita", "pizza", 0.75)); // discounted
-            orderItems.Add(CreateNewProduct(1, "Margerita", "pizza", 0.75)); // discounted
-
+            promotions.Add(new SingleProductPromotion(2, CreateNewProduct(1, "Margerita", "pizza", 0.75), 1.00) { Name = "2 for £1.00" });
+            promotions.Add(new MultiProductPromotion(CreateNewProduct(3, "Cheese", "burger", 1.00), CreateNewProduct(4, "tower", "burger", 1.00), 1.50) { Name = "Cheese & Tower burger Combo for £1.50" });
             PromotionEngine engine = new PromotionEngine(promotions);
-            engine.CalculateDiscounts(orderItems);
+            
+            Basket basket = new Basket(engine);
 
-            foreach (MenuItem item in orderItems)
+            basket.Add(CreateNewProduct(1, "Margerita", "pizza", 0.75)); // full price
+            basket.Add(CreateNewProduct(2, "vegetarian", "pizza", 1.00)); // full price
+            basket.Add(CreateNewProduct(1, "Margerita", "pizza", 0.75)); // discounted
+            basket.Add(CreateNewProduct(1, "Margerita", "pizza", 0.75)); // discounted
+
+            double orderTotal = basket.CalculateTotalWithPromotions();
+
+            foreach (MenuItem item in basket.Products)
             {
-                Console.WriteLine("{0}-{1}-{2}-{3}", item.Sku, item.Name, item.Price, item.DiscountedPrice); 
+                Console.WriteLine("{0}---{1}---{2}---{3:C}---{4:C}", item.Sku, item.Name, item.Price, item.DiscountedPrice, item.PromotionText); 
             }
+
+            Console.WriteLine("Total to Pay - {0:C}", orderTotal);
         }
 
         private static MenuItem CreateNewProduct(int sku, string name, string description, double price)

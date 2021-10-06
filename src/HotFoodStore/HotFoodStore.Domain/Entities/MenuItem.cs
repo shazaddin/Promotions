@@ -1,4 +1,4 @@
-﻿namespace HotFoodStore.Domain
+﻿namespace HotFoodStore.Domain.Entities
 {
     public class MenuItem
     {

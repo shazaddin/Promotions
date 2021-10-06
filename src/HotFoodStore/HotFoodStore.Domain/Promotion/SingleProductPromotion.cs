@@ -1,8 +1,9 @@
-﻿using System;
+﻿using HotFoodStore.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace HotFoodStore.Domain
+namespace HotFoodStore.Domain.Promotion
 {
     public class SingleProductPromotion
     {
@@ -37,7 +38,7 @@ namespace HotFoodStore.Domain
 
         public void ApplyPromotion(List<MenuItem> allOrderedItems)
         {
-            var matchingItemsThatCanBeDiscounted = allOrderedItems.Where(p => (p.Sku == this.menuItemToDiscount.Sku && p.DiscountedPrice == 0)).ToList();
+            var matchingItemsThatCanBeDiscounted = allOrderedItems.Where(p => p.Sku == menuItemToDiscount.Sku && p.DiscountedPrice == 0).ToList();
             var mod = matchingItemsThatCanBeDiscounted.Count % discountQuantity;
 
             var productsToDiscount = matchingItemsThatCanBeDiscounted.Skip(mod).ToList();

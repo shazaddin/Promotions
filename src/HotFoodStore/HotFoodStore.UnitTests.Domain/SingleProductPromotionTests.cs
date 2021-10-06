@@ -1,5 +1,6 @@
 using FluentAssertions;
-using HotFoodStore.Domain;
+using HotFoodStore.Domain.Entities;
+using HotFoodStore.Domain.Promotion;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;

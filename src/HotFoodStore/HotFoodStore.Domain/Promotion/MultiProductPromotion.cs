@@ -1,10 +1,10 @@
-﻿using System;
+﻿using HotFoodStore.Domain.Entities;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 
-namespace HotFoodStore.Domain
+namespace HotFoodStore.Domain.Promotion
 {
-    public class MultiProductPromotion
+    public class MultiProductPromotion : IPromotion
     {
         private readonly MenuItem menuItemToDiscount1;
         private readonly double discountPrice;
@@ -28,7 +28,7 @@ namespace HotFoodStore.Domain
                 throw new ArgumentOutOfRangeException(nameof(discountPrice));
             }
 
-            if (menuItemToDiscount1.Sku <= 0|| menuItemToDiscount2.Sku <= 0 || menuItemToDiscount1.Sku == menuItemToDiscount2.Sku)
+            if (menuItemToDiscount1.Sku <= 0 || menuItemToDiscount2.Sku <= 0 || menuItemToDiscount1.Sku == menuItemToDiscount2.Sku)
             {
                 throw new ArgumentException("The SKU for both menu items must be different and positive");
             }

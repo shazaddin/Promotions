@@ -91,6 +91,30 @@ namespace HotFoodStore.UnitTests.Domain
             orderedItems[2].DiscountedPrice.Should().Be(0);
         }
 
+        [TestMethod]
+        public void When_ApplyingPromotionTwoOfTheSameMenuItemsManyTimes_ShouldRecieveDiscountOnlyOnce()
+        {
+            var margeritaPizza = CreateMenuItem(1, "Margerita pizza", "cheese and tomato", 1.50);
+            var VegetarianPizza = CreateMenuItem(2, "Vegetarian pizza", "cheese, tomato, onions & peppers", 2.00);
+
+            SingleProductPromotion singleProductPromotion = new SingleProductPromotion(2, margeritaPizza, 1.00);
+
+            var orderedItems = new List<MenuItem>() { margeritaPizza, margeritaPizza, VegetarianPizza };
+            singleProductPromotion.ApplyPromotion(orderedItems);
+            singleProductPromotion.ApplyPromotion(orderedItems);
+            singleProductPromotion.ApplyPromotion(orderedItems);
+            singleProductPromotion.ApplyPromotion(orderedItems);
+
+            orderedItems[0].Price.Should().Be(1.50);
+            orderedItems[0].DiscountedPrice.Should().Be(0.50);
+
+            orderedItems[1].Price.Should().Be(1.50);
+            orderedItems[1].DiscountedPrice.Should().Be(0.50);
+
+            orderedItems[2].Price.Should().Be(2.00);
+            orderedItems[2].DiscountedPrice.Should().Be(0);
+        }
+
         private static MenuItem CreateMenuItem(int sku, string name, string description, double price)
         {
             return new MenuItem() { Sku = sku, Name = name, Description = description, Price = price };

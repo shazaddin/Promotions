@@ -37,6 +37,11 @@ namespace HotFoodStore.Domain
 
         public void ApplyPromotion(List<MenuItem> allOrderedItems)
         {
+            var matchingItemsThatCanBeDiscounted = allOrderedItems.Where(p => (p.Sku == this.menuItemToDiscount.Sku && p.DiscountedPrice == 0)).ToList();
+            var mod = matchingItemsThatCanBeDiscounted.Count % discountQuantity;
+
+            var productsToDiscount = matchingItemsThatCanBeDiscounted.Skip(mod).ToList();
+            productsToDiscount.ForEach(p => p.DiscountedPrice = discountPrice / discountQuantity);
         }
     }
 }

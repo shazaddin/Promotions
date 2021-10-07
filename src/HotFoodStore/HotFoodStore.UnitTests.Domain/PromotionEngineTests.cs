@@ -36,5 +36,10 @@ namespace HotFoodStore.UnitTests.Domain
             promotionOne.Verify(p => p.ApplyPromotion(It.IsAny<List<MenuItem>>()), Times.Once());
             promotionTwo.Verify(p => p.ApplyPromotion(It.IsAny<List<MenuItem>>()), Times.Once());
         }
+
+        //There is ALOT more PromotionEngine tests to write but it will take longer than the specified time in the exercise. 
+        //PromotptionEngine decides the order and importance of promotions. All that has to be tested. All the promotion combinations
+        //have to be tested. 
+
     }
 }

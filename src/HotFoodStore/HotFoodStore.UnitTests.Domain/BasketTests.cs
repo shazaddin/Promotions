@@ -42,6 +42,8 @@ namespace HotFoodStore.UnitTests.Domain
             basket.Products.Count.Should().Be(0);
         }
 
+        //There is more Basket tests to write but it will take longer than the specified time in the exercise
+
         private static MenuItem CreateMenuItem(int sku, string name, string description, double price)
         {
             return new MenuItem() { Sku = sku, Name = name, Description = description, Price = price };

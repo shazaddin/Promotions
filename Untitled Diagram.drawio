@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-15T16:10:36.486Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0" etag="5KblgZOumYlhs3VuVCNt" version="24.2.5" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2024-04-15T16:12:05.077Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0" etag="TiDid5G4Za1wzwsGBuNB" version="24.2.5" type="github" pages="2">
   <diagram name="When Joined Project" id="rWECo9qB8roRDnFVRidj">
     <mxGraphModel dx="1426" dy="759" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -407,6 +407,9 @@
         </mxCell>
         <mxCell id="ciCCTYCskr2FTIh0BZeq-2" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Publish&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="304" y="320" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ciCCTYCskr2FTIh0BZeq-5" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Api Management&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="478" y="504" width="105" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-15T16:06:24.225Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0" etag="jeOcso1qDo1eBLmkVE1B" version="24.2.5" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2024-04-15T16:07:15.219Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0" etag="hX21PcAX4xw2oh6O-KZN" version="24.2.5" type="github" pages="2">
   <diagram name="When Joined Project" id="rWECo9qB8roRDnFVRidj">
     <mxGraphModel dx="1426" dy="759" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -393,6 +393,9 @@
         </mxCell>
         <mxCell id="9T7TpkxsKGiTbmSVxBwq-7" value="Advisors&lt;div&gt;Consultants&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="855" y="150" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9T7TpkxsKGiTbmSVxBwq-10" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Publish&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="762" y="321" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

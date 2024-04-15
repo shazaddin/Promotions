@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-15T14:34:03.390Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0" etag="X3jiqrpcLqgB6z8G9sSH" version="24.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-15T14:50:05.047Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0" etag="aSObpoQyT6tMQAEaKGyq" version="24.2.2" type="github">
   <diagram name="Page-1" id="rWECo9qB8roRDnFVRidj">
     <mxGraphModel dx="1426" dy="759" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -43,30 +43,19 @@
         <mxCell id="gSPZtXCD3w9LMXg8kCQh-18" value="Azure Storage" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="234" y="140" width="96" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="gSPZtXCD3w9LMXg8kCQh-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gSPZtXCD3w9LMXg8kCQh-27" target="gSPZtXCD3w9LMXg8kCQh-39">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="gSPZtXCD3w9LMXg8kCQh-55" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gSPZtXCD3w9LMXg8kCQh-27" target="gSPZtXCD3w9LMXg8kCQh-38">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="gSPZtXCD3w9LMXg8kCQh-27" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/integration/Logic_Apps.svg;" vertex="1" parent="1">
-          <mxGeometry x="531.5" y="459" width="67" height="52" as="geometry" />
-        </mxCell>
-        <mxCell id="gSPZtXCD3w9LMXg8kCQh-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.022;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;flowAnimation=1;" edge="1" parent="1" source="gSPZtXCD3w9LMXg8kCQh-28" target="gSPZtXCD3w9LMXg8kCQh-27">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="490" y="538" />
-              <mxPoint x="490" y="485" />
-            </Array>
-          </mxGeometry>
+          <mxGeometry x="445" y="546" width="67" height="52" as="geometry" />
         </mxCell>
         <mxCell id="gSPZtXCD3w9LMXg8kCQh-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;flowAnimation=1;" edge="1" parent="1" source="gSPZtXCD3w9LMXg8kCQh-28" target="gSPZtXCD3w9LMXg8kCQh-44">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="341" y="450" />
-              <mxPoint x="721" y="450" />
+              <mxPoint x="341" y="480" />
+              <mxPoint x="721" y="480" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="gSPZtXCD3w9LMXg8kCQh-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;flowAnimation=1;" edge="1" parent="1" source="gSPZtXCD3w9LMXg8kCQh-28" target="gSPZtXCD3w9LMXg8kCQh-27">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="gSPZtXCD3w9LMXg8kCQh-28" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Service_Domains.svg;" vertex="1" parent="1">
           <mxGeometry x="308" y="512" width="65" height="52" as="geometry" />
@@ -86,19 +75,16 @@
         <mxCell id="gSPZtXCD3w9LMXg8kCQh-37" value="Reports Queue" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.queue_generic;pointerEvents=1;" vertex="1" parent="1">
           <mxGeometry x="395" y="237.5" width="50" height="15" as="geometry" />
         </mxCell>
-        <mxCell id="gSPZtXCD3w9LMXg8kCQh-38" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#DF8C42;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam2.microsoft_sharepoint;" vertex="1" parent="1">
-          <mxGeometry x="547.5" y="564" width="34" height="34" as="geometry" />
-        </mxCell>
         <mxCell id="gSPZtXCD3w9LMXg8kCQh-39" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/analytics/Power_BI_Embedded.svg;" vertex="1" parent="1">
           <mxGeometry x="870" y="380" width="51" height="68" as="geometry" />
         </mxCell>
         <mxCell id="gSPZtXCD3w9LMXg8kCQh-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;flowAnimation=1;" edge="1" parent="1" source="gSPZtXCD3w9LMXg8kCQh-44" target="gSPZtXCD3w9LMXg8kCQh-45">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="gSPZtXCD3w9LMXg8kCQh-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gSPZtXCD3w9LMXg8kCQh-44" target="gSPZtXCD3w9LMXg8kCQh-38">
+        <mxCell id="gSPZtXCD3w9LMXg8kCQh-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gSPZtXCD3w9LMXg8kCQh-44" target="gSPZtXCD3w9LMXg8kCQh-38">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="721" y="581" />
+              <mxPoint x="721" y="568" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -117,9 +103,6 @@
         <mxCell id="gSPZtXCD3w9LMXg8kCQh-46" value="" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Azure_AD_Identity_Protection.svg;" vertex="1" parent="1">
           <mxGeometry x="900" y="369" width="50" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="gSPZtXCD3w9LMXg8kCQh-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.46;entryY=1.1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="gSPZtXCD3w9LMXg8kCQh-27" target="gSPZtXCD3w9LMXg8kCQh-46">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="gSPZtXCD3w9LMXg8kCQh-59" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/analytics/Power_BI_Embedded.svg;" vertex="1" parent="1">
           <mxGeometry x="940" y="440" width="51" height="68" as="geometry" />
         </mxCell>
@@ -135,12 +118,28 @@
         <mxCell id="gSPZtXCD3w9LMXg8kCQh-64" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.user;" vertex="1" parent="1">
           <mxGeometry x="705" y="207.5" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="gSPZtXCD3w9LMXg8kCQh-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gSPZtXCD3w9LMXg8kCQh-44" target="gSPZtXCD3w9LMXg8kCQh-59">
+        <mxCell id="gSPZtXCD3w9LMXg8kCQh-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;startArrow=none;startFill=0;" edge="1" parent="1" source="gSPZtXCD3w9LMXg8kCQh-44" target="gSPZtXCD3w9LMXg8kCQh-59">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="721" y="474" />
+              <mxPoint x="760" y="394" />
+              <mxPoint x="760" y="474" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="gSPZtXCD3w9LMXg8kCQh-38" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#DF8C42;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam2.microsoft_sharepoint;" vertex="1" parent="1">
+          <mxGeometry x="570" y="551" width="34" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="gSPZtXCD3w9LMXg8kCQh-71" value="SQL Elastic pool" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/databases/SQL_Elastic_Pools.svg;" vertex="1" parent="1">
+          <mxGeometry x="531" y="652" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="gSPZtXCD3w9LMXg8kCQh-72" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.user;" vertex="1" parent="1">
+          <mxGeometry x="90" y="512" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gSPZtXCD3w9LMXg8kCQh-73" value="External&lt;div&gt;Users&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="740" y="207.5" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gSPZtXCD3w9LMXg8kCQh-74" value="Internal&amp;nbsp;&lt;div&gt;Users&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="75" y="546" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
